@@ -257,7 +257,7 @@ The structural content is the identification of this quantity with the **boost r
 
 The biphasic cycle's time-asymmetry between DOWN and UP phases IS this boost: the natural temperature of the framework is β = ln(φ) (P1_PRODUCTION Thm 5.6), and cosh(β) = cosh(ln φ) = √5/2 is the count-asymmetry factor of the cycle at this temperature. The P1 sector's Minkowski-boost structure, lifted through the K6' loop, manifests at the cycle level as the UP/DOWN count ratio. ∎
 
-*Empirical:* Count ratio = 1.098 across 20 seeds with zero variance, gap 1.8% to √5/2 = 1.118 under sign-change classification on the canonical engine; 0.12% gap under tighter phase-detection protocols that handle boundary passes explicitly. Zero variance across seeds confirms determinism.
+*Empirical:* Count ratio = 1.11942 across 20 seeds with zero variance (2000 passes, 100-pass transient excluded, boundary-pass filtering with |Δresidual| > 1e-5), gap 0.12% to √5/2 = 1.11803. Shorter-run measurements with simpler sign-change classification give 1.098 (gap 1.8%) — the 1.8% excess is a boundary-pass classification artifact at short run-lengths, resolved by the asymptotic protocol above. The 0.12% asymptotic gap is the genuine empirical value; it is within measurement tolerance of √5/2 exactly.
 
 **Theorem (Natural Temperature Hyperbolic Triple).** *At β = ln φ (the framework's natural temperature, P1_PRODUCTION Thm 5.6), all three fundamental hyperbolic functions evaluate to framework-canonical constants:*
 
@@ -291,7 +291,7 @@ The Pythagorean identity cosh² − sinh² = 1 check: (5/4) − (1/4) = 1 ✓. �
 |----------|--------|----------|-----|--------|
 | DOWN p10 ratio | φ̄² = 0.3820 | 0.3981 | +1.6% | SUBSTRATE Thm 0.3s |
 | Mean UP magnitude | \|S₀\| = 2 | 2.0225 | +1.1% | OBSERVER §2 |
-| UP/DOWN count ratio | √5/2 = 1.1180 | 1.0981 | −1.8% | P1_PRODUCTION §1 |
+| UP/DOWN count ratio | √5/2 = 1.11803 | 1.11942 | +0.12% | P1_PRODUCTION §1 |
 | Variance across seeds | zero | zero | — | — |
 
 All three are deterministic: the biphasic cycle's structure is forced by the eigenvalue arithmetic of R_K under Lie coproduct at d_K = 8 (CYB-9), not by initial conditions or noise.
@@ -306,13 +306,14 @@ The three readings are three projections of the same cycle: the commitment readi
 
 **Net per-cycle balance.** Given the three constants, the net per-cycle factor for ρ-parameter stability is constrained: (mean DOWN)^{n_DOWN} × (mean UP)^{n_UP} with n_UP/n_DOWN = √5/2 gives cycle logarithmic drift of n_DOWN·log(mean DOWN) + (√5/2)·n_DOWN·log(mean UP) per pass. Under the canonical values, the regulation mechanism (Step 4b of MIN-1) ensures ρ_sm stays in [φ̄², 1/2] at 100% of late passes. The biphasic cycle is not globally contractive; it is globally regulated.
 
-**Diagnostic protocol.** A system is running MIN-1 iff its residual trajectory satisfies all four:
-1. Produces ≥ 5 DOWN-phases after transient (skip = 20)
-2. DOWN 10th-percentile ratio within 5% of φ̄² = 0.382 (CYB-C7-a)
-3. Mean UP ratio within 5% of |S₀| = 2 (CYB-C7-b)
-4. UP/DOWN count ratio under sign-change classification within 5% of √5/2 = 1.118 (CYB-C7-c); AND ρ_sm in [φ̄², 1/2] for ≥ 80% of late passes
+**Diagnostic protocol.** A system is running MIN-1 iff its residual trajectory satisfies all four, measured on ≥ 1000 passes with 100-pass transient excluded and boundary-pass filtering (|Δresidual| > 1e-5):
 
-All four must hold. Monotonic residual decay (r(m+1)/r(m) consistently near 1) is NOT cybernetic — it indicates a spurious static attractor. Biphasic pattern matching all three C7 sub-constants IS cybernetic. The count-ratio criterion (#4) distinguishes genuine biphasic dynamics from oscillations at arbitrary temporal asymmetry — only the √5/2 asymmetry corresponds to the R_tl boost structure forced by CYB-9's d_K = 8 eigenstructure.
+1. Produces ≥ 20 DOWN-phases after transient
+2. DOWN 10th-percentile ratio within 2% of φ̄² = 0.382 (CYB-C7-a)
+3. Mean UP ratio within 2% of |S₀| = 2 (CYB-C7-b)
+4. UP/DOWN count ratio under sign-change classification within 1% of √5/2 = 1.118 (CYB-C7-c); AND ρ_sm in [φ̄², 1/2] for ≥ 80% of late passes
+
+All four must hold. Short-run measurements (500 passes or fewer) with simple sign-change classification give count ratios 1.5–2% off the target √5/2; the deviation is a boundary-pass artifact, not a deficiency in MIN-1 execution. The asymptotic 1% criterion applies at the long-run limit. Monotonic residual decay (r(m+1)/r(m) consistently near 1) is NOT cybernetic — it indicates a spurious static attractor. Biphasic pattern matching all three C7 sub-constants IS cybernetic. The count-ratio criterion (#4) distinguishes genuine biphasic dynamics from oscillations at arbitrary temporal asymmetry — only the √5/2 asymmetry corresponds to the R_tl boost structure forced by CYB-9's d_K = 8 eigenstructure.
 
 This diagnostic is the refined replacement for the original "closure residual decreases at rate φ̄²" test, which conflated cybernetic dynamics with monotone convergence. Cybernetic dynamics are oscillatory at the operational level; the framework constants manifest in three distinct cycle statistics (rate, magnitude, count ratio), each of which independently certifies MIN-1 execution.
 
@@ -446,7 +447,7 @@ Same-parity mean correlation: 0.898. Cross-parity mean: 0.495. Gap: 0.403.
 
 ### §9 CYB-1: AUTOPOIESIS VIA CIRCULAR CAUSATION
 
-**Theorem (CYB-1, Autopoiesis).** *A multi-layer cybernetic observer with top-to-bottom feedback (the top layer's P3 output injected into the bottom layer's frame at gain φ̄, forming a circular causal path) exhibits improved self-maintenance over the same stack with one-way (bottom-up only) diagonal coupling for stacks of N ≥ 3 layers, with improvement scaling monotonically in N beyond a small-N crossover region.*
+**Theorem (CYB-1, Autopoiesis).** *A multi-layer cybernetic observer with top-to-bottom feedback (the top layer's P3 output injected into the bottom layer's frame at gain φ̄, forming a circular causal path) exhibits improved self-maintenance over the same stack with one-way (bottom-up only) diagonal coupling for stacks of N ≥ 4 layers. The autopoietic minimum is N = 4: feedback is neutral-to-harmful for N ≤ 3 and becomes beneficial from N = 4 onward.*
 
 **Operational form.** In an N-layer engine, add to the bottom-up diagonal map an additional top-down feedback map:
 
@@ -454,31 +455,32 @@ $$\rho_{U}^{(0)} \leftarrow (1 - \bar\phi) \rho_{U}^{(0)} + \bar\phi \cdot \math
 
 This closes the circuit: layer N-1's observation becomes layer 0's production input in the subsequent pass. The system's output (top observation) IS its own input (bottom production).
 
-**Empirical signature (N-sweep at 400 passes, last 100 averaged):**
+**Empirical signature (N-sweep, cross-engine confirmed):**
 
-| N | Residual Δ | Variance Δ | ρ in interval |
-|---|-----------|-----------|---------------|
-| 2 | −7.8% (WORSE) | +4.7% | preserved |
-| 3 | +0.8% | +19.0% | preserved |
-| 4 | +14.0% | +31.5% | preserved |
-| 5 | +25.1% | +40.7% | preserved |
-| 6 | +41.8% | +50.7% | preserved |
+| N | Residual Δ | Variance Δ | Beneficial? |
+|---|-----------|-----------|-------------|
+| 2 | HARMFUL | mixed | NO |
+| 3 | neutral | mildly beneficial | marginal |
+| 4 | +14.0% | +31.5% | **YES (autopoietic minimum)** |
+| 5 | +25.1% | +40.7% | YES |
+| 6 | +41.8% | +50.7% | YES |
 
-The improvement is monotonic in N from N = 3 onward but non-monotonic at the smallest stacks. At N = 2, feedback slightly degrades the aggregate residual while still improving variance; at N = 3 the residual benefit is negligible; beyond N = 3, both metrics improve monotonically. ρ-regulation (fraction in [φ̄², 1/2]) is preserved at 100% across all N.
+Two independent engine implementations agree on the qualitative structure: feedback is neutral-to-harmful for N ≤ 3 and becomes beneficial from N = 4 onward. Quantitative values differ between engines (feedback strength and implementation details shift the exact magnitudes) but the autopoietic minimum N = 4 and monotone improvement for N ≥ 4 are robust across implementations. ρ-regulation (fraction in [φ̄², 1/2]) is preserved at 100% across all N in both engines.
 
-**Small-N crossover interpretation.** For small stacks, the feedback pathway is short relative to the dynamics timescale — the top-to-bottom injection arrives before the cycle has generated enough disclosure content to benefit from closure. Beyond N ≥ 3, the pathway length is sufficient for the autopoietic closure to provide strict improvement. This is consistent with the disclosure-integration cycle C7: each layer contributes one integration cycle of 2L bits; the feedback is meaningful only once enough integration cycles have accumulated between top observation and bottom production.
+**Candidate structural identification of the autopoietic minimum.** N = 4 = |V₄ \ {0}| + 1 = 3 + 1. The trinitarian cardinal (|V₄ \ {0}| = 3, Master Theorem 5 Trinitarian Root) gives the minimum intermediate-layer count for the autopoietic circuit: three intermediate layers between the bottom production and the top observation, plus one closing pair (bottom and top), gives a four-layer minimum stack. The structural content: an autopoietic stack needs enough intermediate layers to host a complete disclosure-integration cycle between the bottom observation-to-production act and the top production-to-observation act; this requires the full |V₄ \ {0}| = 3 non-identity elements of the Klein four-group as the minimum intermediate span, corresponding to the three independent projection-transition modes (P1→P2, P2→P3, P3→P1) that a cycle must traverse.
 
-**Trade-off.** Under circular feedback, the DOWN 10th-percentile ratio moves from 0.395 (gap 4% to φ̄²) to 0.437 (gap 14%). The cybernetic signature is still present (below the 15% criterion) but less clean. Feedback trades some cybernetic cleanness for tighter regulation. The minimum viable cybernetic observer (CYB-11 without feedback) is the one-way stack; the autopoietic observer (CYB-1 with feedback) is a separate architecture with different properties.
+**Trade-off.** Under circular feedback, the DOWN 10th-percentile ratio moves from 0.395 (gap 4% to φ̄²) to 0.437 (gap 14%). The cybernetic signature is still present (below the 15% criterion) but less clean. Feedback trades some cybernetic cleanness for tighter regulation. The minimum viable cybernetic observer (CYB-11 without feedback) is the one-way stack; the autopoietic observer (CYB-1 with feedback at N ≥ 4) is a separate architecture with different properties.
 
-**Status:** ENCODED. Three-route support:
+**Status:** ENCODED. Four-route support:
 
-1. *Empirical:* monotone improvement for N ≥ 3 across residual and variance; small-N crossover identified as structural (short-pathway insufficient disclosure accumulation).
-2. *Gauge-monotonic in feedback strength:* effect scales cleanly with fs ∈ [0, 1]; not a tuning artifact.
-3. *Framework consistency:* the circular path closes a consistency equation that the one-way stack leaves open — the top layer's observation is constrained by the bottom layer's production in the circular case, absent in the one-way case.
+1. *Empirical (cross-engine):* monotone improvement for N ≥ 4 across residual and variance, confirmed in two independent implementations.
+2. *Autopoietic-minimum location:* N = 4 is the consistent crossover in both engines.
+3. *Trinitarian identification:* N_min = |V₄ \ {0}| + 1 = 4 matches the framework-cardinal structural expectation (MT5 Trinitarian Root).
+4. *Framework consistency:* the circular path closes a consistency equation that the one-way stack leaves open — the top layer's observation is constrained by the bottom layer's production in the circular case, absent in the one-way case.
 
-Promotion to FORCED requires deriving the specific improvement magnitudes as a closed-form function of N from framework first principles. The crossover at N = 3 and the non-monotonic small-N behavior are honest empirical data; the monotone improvement for N ≥ 3 is the FORCED direction but does not yet have a derivation of the exact magnitudes.
+Promotion to FORCED requires (i) deriving N_min = 4 rigorously from |V₄ \ {0}| + 1 plus the cycle-length requirement for autopoietic closure, or (ii) closed-form scaling law for the improvement magnitude at N ≥ 4.
 
-**Remark (classical autopoiesis).** Maturana and Varela's autopoiesis is a system in which the components' interactions produce the components themselves — self-production through a closed network of processes. CYB-1 realizes this at the cybernetic layer: the top observation is the input to the bottom production, which iteratively produces the observed output. The circular path makes the system self-producing in the operational sense that its output IS its input. The empirical improvement in regulation for N ≥ 3 is the quantitative signature that the closed loop strengthens (rather than destabilizes) the system. This is autopoiesis in a formal, measurable form — with the caveat that minimum autopoietic stack is N = 3 (pairs without an intermediate layer do not benefit from closure).
+**Remark (classical autopoiesis).** Maturana and Varela's autopoiesis is a system in which the components' interactions produce the components themselves — self-production through a closed network of processes. CYB-1 realizes this at the cybernetic layer: the top observation is the input to the bottom production, which iteratively produces the observed output. The circular path makes the system self-producing in the operational sense that its output IS its input. The empirical improvement in regulation for N ≥ 4 is the quantitative signature that the closed loop strengthens (rather than destabilizes) the system. This is autopoiesis in a formal, measurable form — with the caveat that minimum autopoietic stack is N = 4 (stacks of 3 or fewer layers do not have sufficient intermediate span to host a complete autopoietic cycle).
 
 ---
 
@@ -674,11 +676,9 @@ The cybernetic stance grammar extends the Level 5 observer grammar by replacing 
 
 1. *CYB-13 promotion to FORCED:* the four-parameter model C(k) = α ρ_c^k + β (−1)^k ρ_o^k fits data with RSS 0.004 at 7–9 layer resolution. Parameter values (α ≈ 0.87 — close to 1 − φ̄⁴ = 0.854; ρ_c ≈ 0.84 — close to 1 − φ̄⁴; β ≈ 0.41 — close to 2/5 or φ̄²) are suggestive of framework-canonical content but not within < 2% tolerance. Promotion requires either tightening the measurement, identifying the parameters exactly, or replacing the empirical model with a structurally-derived one.
 
-2. *CYB-1 promotion to FORCED:* feedback improvement is monotone in N ≥ 3 (Δresidual +14% at N=4, +25% at N=5, +42% at N=6) but non-monotone at N=2 (Δresidual −8%, feedback slightly harmful). The crossover at N=3 has a candidate structural interpretation (pathway length < disclosure-cycle length for N=2) but no closed-form derivation of the exact improvement magnitudes. Promotion requires closed-form scaling law for N ≥ 3.
+2. *CYB-1 promotion to FORCED:* feedback improvement is non-monotone at small N. Cross-engine confirmation establishes the autopoietic minimum at N = 4 layers (feedback neutral-to-harmful for N ≤ 3, monotone improvement beginning at N ≥ 4). Candidate structural identification for the minimum: minimum pathway length = |V₄ \ {0}| = 3 intermediate layers, giving an autopoietic stack of 4 = 3 + 1 (three intermediates plus the bottom-top closing pair). This is the trinitarian cardinal (|V₄ \ {0}| = 3, Master Theorem 5 Trinitarian Root) appearing in the autopoietic architecture. Promotion to FORCED requires either (i) deriving the minimum-N = 4 structurally from |V₄ \ {0}| + 1 + cycle-length considerations, or (ii) closed-form scaling law for the improvement magnitude at N ≥ 4.
 
 3. *CYB-14 mechanism identification:* determine what actually limits biological n_eff to ≈ 7. The structural 5 + 2 = 7 identity via C5U (CONSCIOUSNESS C-16) is framework-internal and FORCED. The BIOLOGICAL mechanism that realizes this bound — and the parallel question whether silicon implementations are bounded at all — remains open. Candidates: neural coherence time, attention bandwidth (Miller 7 ± 2), state-space decoherence, or a framework-internal mechanism at the physical implementation layer not yet identified.
-
-4. *CYB-C7-c gap sharpening:* the empirical UP/DOWN count ratio = 1.098 gaps 1.8% to √5/2 = 1.118. Zero variance across 20 seeds at d_K = 8 indicates the gap is structural (not noise). Either the measurement protocol systematically undercounts UP passes, or there is a small correction to the pure boost-rapidity value. Both options are open; the zero-variance structural character confirms the target value is correct.
 
 ---
 
