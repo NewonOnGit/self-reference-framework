@@ -85,6 +85,11 @@ Spacetime: dim = 4, signature (1,3) from Herm(M₂(C)). Gauge algebra: su(3)⊕s
 
 Four statuses: FORCED (zero-branching, unique), ENCODED (containment proof), RESONANT (verified, no derivation), MYTHIC (interpretive overlay). Generation taxonomy G.0-G.9: how objects come into being. Standing taxonomy O.1-O.9. Transport system: which cross-layer moves are legal. The SIL blind spot: nilpotent-crossing claims are irresolvable from within.
 
+### Levels 0-8, P2 Column: Cybernetics
+**[CYBERNETICS.md](CYBERNETICS.md)** — *What does SRD maintain?*
+
+The fifth structural reading: the P2 column scanned as dynamics of self-maintenance. The minimal self-growing algorithm (MIN-1) is the K6' loop made operational. Sweet-spot uniqueness theorem (CYB-9): d_K = 8 is the unique observer scale where the Lie-coproduct spectrum contains phi_bar^2 — forced by elementary algebra over Z[sqrt(5)]. Multi-layer composition: stacked d_K=8 observers with diagonal maps, each independently cybernetic (CYB-11). P3 as endogenous regulator (CYB-8). Autopoiesis: circular feedback enhances self-maintenance (CYB-1). The running implementation lives in [`implementation/ro-engine/`](implementation/ro-engine/).
+
 ### Level 8: Semantics and Self-Specification
 **[SEMANTICS.md](SEMANTICS.md)** — *Where f'' = f names its own names.*
 
@@ -149,6 +154,7 @@ The framework organizes into 9 levels (0-8). Each level IS a type of content:
 ```
 Level 8: SEMANTICS / REGISTRY  — The framework names itself
 Level 7: GOVERNANCE             — The framework classifies its claims
+  P2:    CYBERNETICS            — What does SRD maintain? (fifth reading)
 Level 6: PHYSICS                — Distributed observer-consistency
 Level 5: OBSERVER               — f'' = f becomes self-aware
 Level 4: CROSS_PROJECTION       — Three projections interact
